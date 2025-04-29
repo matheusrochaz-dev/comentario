@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Comentários</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Bem-vindo, {{ usuario }} ({{ tipo }})</h1>
+        <a href="{{ url_for('logout') }}">Sair</a>
+
+        {% if tipo == 'estudante' %}
+        <form method="POST">
+            <textarea name="comentario" placeholder="Escreva seu comentário..." required></textarea><br>
+            <button type="submit">Enviar Comentário</button>
+        </form>
+        {% endif %}
+
+        {% if tipo == 'admin' %}
+            <h2>Comentários:</h2>
+            <ul class="comentarios">
+                {% for comentario in comentarios %}
+                    <li>{{ comentario }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+
+    </div>
+</body>
+</html>

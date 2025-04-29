@@ -1,0 +1,47 @@
+body {
+    font-family: sans-serif;
+    background-color: #f0f2f5;
+    padding: 40px;
+    text-align: center;
+}
+
+.container {
+    background: white;
+    border-radius: 10px;
+    padding: 30px;
+    max-width: 600px;
+    margin: auto;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+input, textarea {
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+    font-size: 14px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.comentarios {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+    margin-top: 20px;
+}
+
+.comentarios li {
+    background: #f8f8f8;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 6px;
+}
+
+.erro {
+    color: red;
+    font-weight: bold;
+}
